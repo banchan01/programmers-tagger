@@ -1,0 +1,49 @@
+.pgc-tags { display: inline-flex; flex-wrap: wrap; gap: 4px; margin-left: 8px; vertical-align: middle; }
+.pgc-tag {
+  font-size: 11px; line-height: 1; padding: 3px 7px; border-radius: 999px;
+  background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe; white-space: nowrap;
+  font-weight: 500;
+}
+.pgc-tag.pgc-sql { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+.pgc-tag.pgc-basic { background: #f3f4f6; color: #4b5563; border-color: #e5e7eb; }
+.pgc-hide .pgc-tags { filter: blur(4px); transition: filter .15s; cursor: help; }
+.pgc-hide .pgc-tags:hover { filter: none; }
+.challenge-title + .pgc-tags { margin-left: 10px; }
+
+/* ---------- 유형 필터 ---------- */
+.pgc-filter {
+  border: 1px solid #d7e2eb; border-radius: 8px; padding: 14px 16px; margin: 0 0 16px;
+  background: #fff; font-size: 13px; color: #263747;
+}
+.pgc-filter-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.pgc-filter-head strong { font-size: 15px; }
+.pgc-hint { color: #78909c; font-size: 12px; }
+.pgc-reset {
+  margin-left: auto; border: 0; background: none; color: #0078ff; cursor: pointer; font-size: 13px; padding: 2px 4px;
+}
+.pgc-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.pgc-chip {
+  border: 1px solid #d7e2eb; background: #f7f9fb; color: #44576c; border-radius: 999px;
+  padding: 5px 10px; font-size: 12px; cursor: pointer; line-height: 1.2;
+}
+.pgc-chip:hover { border-color: #a5b4fc; }
+.pgc-chip .pgc-n { margin-left: 5px; color: #98a8b9; font-size: 11px; }
+.pgc-chip.on { background: #3730a3; border-color: #3730a3; color: #fff; }
+.pgc-chip.on .pgc-n { color: #c7d2fe; }
+.pgc-chip-sql.on { background: #047857; border-color: #047857; }
+.pgc-chip-sql.on .pgc-n { color: #a7f3d0; }
+.pgc-chip-lv.on { background: #263747; border-color: #263747; }
+.pgc-empty { color: #78909c; margin: 6px 0 0; }
+.pgc-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.pgc-table caption { text-align: left; font-weight: 600; padding: 4px 0 8px; }
+.pgc-table th { text-align: left; font-weight: 500; color: #78909c; border-bottom: 1px solid #d7e2eb; padding: 8px 6px; }
+.pgc-table td { border-bottom: 1px solid #eef2f6; padding: 10px 6px; vertical-align: middle; }
+.pgc-table td a { color: #263747; font-weight: 600; text-decoration: none; }
+.pgc-table td a:hover { text-decoration: underline; }
+.pgc-table td small { display: block; color: #98a8b9; margin-top: 4px; font-size: 12px; }
+.pgc-table th:last-child, .pgc-table td.pgc-lv { width: 70px; white-space: nowrap; }
+.pgc-lv-0 { color: #1bbaff; } .pgc-lv-1 { color: #2db400; } .pgc-lv-2 { color: #ffa800; }
+.pgc-lv-3 { color: #ff6b18; } .pgc-lv-4 { color: #f2003e; } .pgc-lv-5 { color: #c658e1; }
+/* 유형을 고르면 사이트의 원래 목록과 페이지 번호는 숨긴다 */
+.pgc-filtering [data-pgc-wrap],
+.pgc-filtering .pgc-filter ~ * { display: none !important; }
